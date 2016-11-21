@@ -1,0 +1,21 @@
+
+<h1>Searching for - <%= @search_term %></h1>
+
+<% if @stupid == nil %>
+	<p>No stupid found</p>
+<% else %>
+<table border="1">
+	<tr>
+		<th>Name</th>
+		<th>Author</th>
+		<th>Description</th>
+	</tr>
+	<% @stupid.each do |book| %>
+		<tr class=<%= cycle('even','odd') %>>
+			<td><%= book.title %></td>
+			<td><%= book.authors %></td>
+			<td><%= book.description %></td>
+		</tr>
+	<% end %>
+	</table>
+<% end %>
