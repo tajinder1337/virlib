@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background: url(images/about_b.jpg); 
+  background-size: cover; 
+  margin: 0;}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #800080;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+}
+
+.info{
+  font-size: 22px;
+  color: white;
+}
+
+.headings{
+  font-size: 40px;
+  color: #326872;
+}
+</style>
+</head>
+<body>
+
+<ul class="topnav">
+  <li class="right"><a href="http://localhost:3000/home">Home</a></li>
+  <li class="right"><a class="active" href="#about">About</a></li>
+  <li class="right"><a href="http://localhost:3000/books/index/books">Library</a></li>
+</ul>
+
+<div style="padding:0 16px;">
+  <h2 class="headings">Virtual Library</h2>
+  <div class="info"><p>A Virtual Library is a collection of resources available on one or more computer systems, where a single interface or entry point to the collections is provided.</p>
+  <p>The key point being that the user need not know where particular resources are located -- the location is "virtual".</p>
+  <p>The need for physical books diminishes by using a virtual library, so digital libraries also have the benefit of helping to conserve paper resources.<p></div>
+</div>
+
+</body>
+</html>

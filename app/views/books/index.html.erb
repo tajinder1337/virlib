@@ -1,5 +1,18 @@
+<script>
+function search(){
+ var foo = document.getElementById("userInput").value;
+ window.location = "http://localhost:3000/books/index/"+foo;}
+</script>
 
-<h1>Searching for - <%= @search_term %></h1>
+<ul class="topnav">
+  <li class="right"><a href="http://localhost:3000/home">Home</a></li>
+  <li class="right"><a href="http://localhost:3000/about">About</a></li>
+  <li class="right"><a class="active" href="http://localhost:3000/books/index/books">Library</a></li>
+</ul>
+
+<h2>Search for any topic or author:</h2><input type="text" id="userInput" onKeyDown="if(event.keyCode==13) search();" </input>
+
+<h1>Books:</h1>
 
 <% if @stupid == nil %>
 	<p>No stupid found</p>
@@ -7,14 +20,18 @@
 <table border="1">
 	<tr>
 		<th>Name</th>
+		<th>cover</th>
 		<th>Author</th>
 		<th>Description</th>
+		<th>Links</th>
 	</tr>
 	<% @stupid.each do |book| %>
 		<tr class=<%= cycle('even','odd') %>>
 			<td><%= book.title %></td>
+			<td><img src="<%=book.image_link%>"></td>
 			<td><%= book.authors %></td>
 			<td><%= book.description %></td>
+			<td><p><a href=<%= book.preview_link %>>Preview</a></p><p><a href=<%= book.info_link %>>Info</a></p></td>
 		</tr>
 	<% end %>
 	</table>

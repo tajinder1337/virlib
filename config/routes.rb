@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  get 'open/first'
+
   get 'books/index'
 
   get 'greets/hello_first'
  match ':controller(/:action(/:id))', :via => [:get,:post]
+
+ root :to => "open#first"
   
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background: url(); 
+  background-size: cover; 
+  margin: 0;}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #800080;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+}
+
+div.img {
+    border: 2px solid #ccc;
+}
+
+div.img:hover {
+    border: 2px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    padding-top: 20px;
+    margin-left: 50px;
+    float: left;
+    width: 28.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>
+
+<ul class="topnav">
+  <li class="right"><a class="active" href="#home">Home</a></li>
+  <li class="right"><a href="about.html">About</a></li>
+  <li class="right"><a href="http://localhost:3000/books/index/books">Library</a></li>
+</ul>
+
+
+<h1 style="padding:0 40px;color:#800080">Browse Books</h1>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="http://localhost:3000/books/index/computer">
+      <img src="images/com-book.jpg" alt="Computer" width="600" height="200">
+    </a>
+    <div class="desc">Computers</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="http://localhost:3000/books/index/science">
+      <img src="images/science-book.jpg" alt="Science" width="600" height="400">
+    </a>
+    <div class="desc">Science</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="http://localhost:3000/books/index/psychology">
+      <img src="images/Psychology-book.jpg" alt="Psychology" width="600" height="400">
+    </a>
+    <div class="desc">Psychology</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="http://localhost:3000/books/index/literature">
+      <img src="images/literature-book.jpg" alt="Literature" width="600" height="400">
+    </a>
+    <div class="desc">Literature</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="http://localhost:3000/books/index/music">
+      <img src="images/music-book.png" alt="Music" width="600" height="400">
+    </a>
+    <div class="desc">Music</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="http://localhost:3000/books/index/philosophy">
+      <img src="images/philosophy-book.jpg" alt="Philosophy" width="600" height="400">
+    </a>
+    <div class="desc">Philosophy</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <p>Or search <a target="_blank" href="http://localhost:3000/books/index/books">here</a></p>
+</div>
+
+
+</body>
+</html>
